@@ -13,7 +13,9 @@
             Console.WriteLine("Eneter your Chemistry exam result: ");
             int chemistryResult = int.Parse(Console.ReadLine());
 
-            if (mathResult > 70 || physicResult > 55 || chemistryResult > 45 && (mathResult + physicResult + chemistryResult) > 180)
+            int sumOfResults = mathResult + physicResult + chemistryResult;
+
+            if (mathResult > 70 && physicResult > 55 && chemistryResult > 45 && sumOfResults > 180)
             {
                 Console.WriteLine("Candidate admitted to recruitment");
             }
@@ -21,7 +23,7 @@
             {
                 Console.WriteLine("Candidate admitted to recruitment");
             }
-            else if ((mathResult + physicResult) > 150)
+            else if ((mathResult + chemistryResult) > 150)
             {
                 Console.WriteLine("Candidate admitted to recruitment");
             }
